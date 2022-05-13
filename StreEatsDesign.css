@@ -31,15 +31,32 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo img {
-    width: 100px;
+    width: 350px;
     float: left;
-    height: auto;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
 }
 
 .navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 a:after {
     content: "";
     position: absolute;
-    background-color: #008877;
+    background-color: #00C6CF;
     height: 3px;
     width: 0%;
     left: 0;
@@ -71,4 +88,39 @@ a:after {
 
 a:hover:after {
     width: 100%;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #00C6CF;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #00C6CF;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
 }
