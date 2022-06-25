@@ -4,7 +4,7 @@ $visitor_email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$email_from = 'info@streeats.com';
+$email_from = 'info@terminable-principl.000webhostapp.com/';
 
 $email_subject = 'New Form Submission';
 
@@ -13,13 +13,13 @@ $email_body = "User Name: $name.\n".
                 "Subject: $subject.\n".
                  "User Message: $message .\n";
 
-$to = 'streEatsinfo@gmail.com'
+$to = 'streeatsinfo@gmail.com';
 
 $headers = "From: $email_from \r\n";
 
 $headers .= "Reply-To: $visitor_email \r\n";
 
-$mail($to,$email_subject,$email_body,$headers);
+mail($to,$email_subject,$email_body,$headers);
 
 header("Location: Contact.html");
 
